@@ -4,5 +4,7 @@ def minmax(*pomiary):
     else:
         raise ValueError("brak pomiarów")
 
-print(minmax(1, 23, 4, 5))
-print(minmax())
+dane = [3, 9, 4]
+
+print(minmax(8, 12, 10))
+print(minmax(*dane))
