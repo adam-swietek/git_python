@@ -11,8 +11,14 @@ print(minmax(*dane))
 
 def przetworz(*pomiary, minimum=None, maksimum=None, skala=1):
     output = []
-    # dokonczyc po wykladzie
+    
+    for p in pomiary:
+        if minimum is not None and p < minimum:
+            continue
+        if maksimum is not None and p > maksimum:
+            continue
+        output.append(p*skala)
     return output
 
-#print(przetworz(3, 9, 4, skala=2))
+print(przetworz(3, 9, 4, skala=2))
 
